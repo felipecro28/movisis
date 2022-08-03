@@ -1,0 +1,197 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 25vh;
+    background-color: #141E26;
+    color: #e9f2f9;
+}
+
+.logo-div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
+.logo-text-div{
+    text-align: center;
+}
+
+.logo-div img{
+    width: 180px;
+    max-width: 30%;
+
+}
+
+.logo-text-div h1{
+    font-size: 2.5rem;
+    padding-bottom: 3px;
+    letter-spacing: 4px;
+}
+
+.logo-text-div p{
+  font-size: 0.7rem;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    font-size: 0.7rem;
+    transition: 0.1s;
+}
+
+nav .a-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+
+nav .a-links li {
+    padding: 20px 0;
+    cursor: pointer;
+    transition: 1s ease
+}
+
+
+nav .social-media-div {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav .social-media-div li {
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: 1s ease;
+
+
+}
+
+.hamburguer-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+.hamburguer-menu-active-div {
+    display: none;
+    flex-direction: row;
+    cursor: pointer;
+
+}
+
+.hamburguer-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: #e9f2f9;
+    margin: 3px 0;
+
+}
+
+
+.hamburguer-menu-active {
+    width: 3px;
+    height: 30px;
+    background-color: #e9f2f9;
+    margin: 3px;
+
+}
+
+nav .a-links li:hover, nav .social-media-div li:hover{
+    color: yellow;
+}
+
+@media (max-width: 750px) {
+
+    header{
+        height: 13vh;
+    }
+
+    .nav-div{
+        display: none;
+        transition: 0.2s;
+    }
+
+    .nav-div-active {
+        width: 100vw;
+        height: 12vh;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 13%;
+        background-color: #141E26;
+        animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+        0%{
+            top: 0
+        }
+
+        50%{
+            top: '5%'
+        }
+
+        100%{
+            top:'13%'
+        }
+    }
+
+    .a-links-active, .social-media-div-active {
+        justify-content: center;
+        display: flex;
+        width: 100vw;
+        margin: 0 auto;
+        flex-direction: row;
+        list-style: none;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    nav .a-links-active li:hover, nav .social-media-div-active li:hover{
+        color: yellow;
+    }
+
+    .a-links-active li {
+        padding: 0 20px;
+    }
+
+    .social-media-div-active li {
+        padding: 15px 50px;
+    }
+
+    .logo-div {
+        width: 100vw;
+    }
+    .logo-div h1{
+
+        font-size: 1.5rem;
+    }
+    .logo-div p {
+        font-size: 0.5rem;
+    }
+
+    .hamburguer-menu {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        top: 4.5%;
+      }
+
+      .hamburguer-menu-active-div {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        top: 4.5%;
+      }
+}
