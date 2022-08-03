@@ -8,30 +8,30 @@ header {
     color: #e9f2f9;
 }
 
-.logo-div{
+.logo-div {
     display: flex;
     justify-content: space-evenly;
     width: 50vw;
 }
 
-.logo-text-div{
+.logo-text-div {
     text-align: center;
 }
 
-.logo-div img{
+.logo-div img {
     width: 180px;
     max-width: 30%;
 
 }
 
-.logo-text-div h1{
+.logo-text-div h1 {
     font-size: 2.5rem;
     padding-bottom: 3px;
     letter-spacing: 4px;
 }
 
-.logo-text-div p{
-  font-size: 0.7rem;
+.logo-text-div p {
+    font-size: 0.7rem;
 }
 
 
@@ -107,47 +107,50 @@ nav .social-media-div li {
 
 }
 
-nav .a-links li:hover, nav .social-media-div li:hover{
+nav .a-links li:hover,
+nav .social-media-div li:hover {
     color: yellow;
 }
 
 @media (max-width: 750px) {
 
-    header{
+    header {
         height: 13vh;
     }
 
-    .nav-div{
+    .nav-div {
         display: none;
         transition: 0.2s;
     }
 
     .nav-div-active {
         width: 100vw;
-        height: 12vh;
+        height: 8vh;
         display: flex;
         flex-direction: row;
         position: absolute;
         top: 13%;
         background-color: #141E26;
         animation: fadeIn 0.5s;
+        border-bottom: 2px white solid;
     }
 
     @keyframes fadeIn {
-        0%{
+        0% {
             top: 0
         }
 
-        50%{
+        50% {
             top: '5%'
         }
 
-        100%{
-            top:'13%'
+        100% {
+            top: '13%'
         }
     }
 
-    .a-links-active, .social-media-div-active {
+    .a-links-active,
+    .social-media-div-active {
         justify-content: center;
         display: flex;
         width: 100vw;
@@ -158,7 +161,8 @@ nav .a-links li:hover, nav .social-media-div li:hover{
         text-align: center;
     }
 
-    nav .a-links-active li:hover, nav .social-media-div-active li:hover{
+    nav .a-links-active li:hover,
+    nav .social-media-div-active li:hover {
         color: yellow;
     }
 
@@ -173,10 +177,12 @@ nav .a-links li:hover, nav .social-media-div li:hover{
     .logo-div {
         width: 100vw;
     }
-    .logo-div h1{
+
+    .logo-div h1 {
 
         font-size: 1.5rem;
     }
+
     .logo-div p {
         font-size: 0.5rem;
     }
@@ -186,12 +192,12 @@ nav .a-links li:hover, nav .social-media-div li:hover{
         position: absolute;
         right: 30px;
         top: 4.5%;
-      }
+    }
 
-      .hamburguer-menu-active-div {
+    .hamburguer-menu-active-div {
         display: flex;
         position: absolute;
         right: 30px;
         top: 4.5%;
-      }
+    }
 }

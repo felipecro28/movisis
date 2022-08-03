@@ -2,6 +2,7 @@
 import './header.css'
 import { SiInstagram, SiTwitter, SiLinkedin } from 'react-icons/si'
 import { useState } from 'react'
+import { Router, Link } from 'react-router-dom'
 
 export default function Header() {
 
@@ -11,7 +12,7 @@ export default function Header() {
         <header>
             <div className='logo-div'>
                 <div className='logo-text-div'>
-                    <h1>Rental Car</h1>
+                    <h1>Car Sale</h1>
                     <p>solução imediata em veículos</p>
                 </div>
             </div>
@@ -26,7 +27,7 @@ export default function Header() {
                 <nav>
                     <ul className='a-links'>
                         <li>Sobre nós</li>
-                        <li>Nossos veículos</li>
+                        <Link style={{textDecoration: 'none', color: '#e9f2f9'}} to='/cars'><li>Nossos veículos</li></Link>
                         <li>Contato</li>
                     </ul>
 
