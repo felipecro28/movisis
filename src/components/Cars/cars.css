@@ -1,0 +1,14 @@
+.cars-div {
+    background-color: #d0e0eb;
+    width: 100%;
+    height: fit-content;
+}
+
+.cards-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
