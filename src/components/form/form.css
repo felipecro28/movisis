@@ -11,9 +11,10 @@ form h1{
 
 section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    text-align: center;
     width: 100%;
     height: 200px;
 }
@@ -39,11 +40,12 @@ section .preco-input input {
 
 .labels-preco-div {
     width: 100%;
-
 }
 
 
 .ordenar-input{
+    text-align: center;
+    width: 100px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -51,6 +53,7 @@ section .preco-input input {
 
 
 .ordenar-input *{
+    width: 100px;
     margin-top: 15px;
 }
 
