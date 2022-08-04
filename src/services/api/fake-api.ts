@@ -1,6 +1,6 @@
-import { CarModel } from "../../models/CarModel";
 
-export const api: CarModel[] = [
+
+export const api  = [
 
     {
         id: 1,

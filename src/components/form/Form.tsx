@@ -1,22 +1,19 @@
 import './form.css'
 import { useState } from 'react'
-import { CarModel } from '../../models/CarModel'
 
 
 interface formProps {
-    onSubmit: (value1: number, value2: number) => CarModel[]
+    onSubmit: (value1: number, value2: number, select: string) => void
 }
 
-export default function Form(props : formProps) {
-
-
+export default function Form(props: formProps) {
     const [minValue, setMinValue] = useState<number>(0)
-    const [maxValue, setMaxValue] = useState<number>(0)
+    const [maxValue, setMaxValue] = useState<number>(100000)
+    const [select, setSelect] = useState<string>('menor-valor')
 
     return (
         <form>
             <h1>Filtrar</h1>
-
 
             <section>
 
@@ -33,7 +30,7 @@ export default function Form(props : formProps) {
 
                 <div className='ordenar-input'>
                     <label htmlFor='ordenar'>Ordenar:</label>
-                    <select name="ordenar" id="ordenar">
+                    <select name="ordenar" id="ordenar" value={select} onChange={(e) => setSelect(e.target.value)}>
                         <optgroup label="Por Valor:">
                             <option value="maior-valor">Maior valor</option>
                             <option value="menor-valor">Menor valor</option>
@@ -47,7 +44,7 @@ export default function Form(props : formProps) {
             </section>
             <button onClick={(e) => {
                 e.preventDefault()
-                props.onSubmit(minValue, maxValue)
+                props.onSubmit(minValue, maxValue, select)
             }}>Filtrar</button>
         </form>
     )
