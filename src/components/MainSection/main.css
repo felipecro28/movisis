@@ -30,6 +30,7 @@
     align-items: center;
     flex-wrap: wrap-reverse;
     height: fit-content;
+    justify-content: space-around;
 }
 
 .second-text p{
