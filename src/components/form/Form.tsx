@@ -46,6 +46,7 @@ export default function Form(props: formProps) {
                 e.preventDefault()
                 props.onSubmit(minValue, maxValue, select)
             }}>Filtrar</button>
+            
         </form>
     )
 }
