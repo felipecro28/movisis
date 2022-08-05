@@ -1,4 +1,5 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { api } from "../services/api/fake-api";
 import { car } from "../services/interfaces/car";
 
 
@@ -6,23 +7,26 @@ type ShopCartContextProps = {
     children: ReactNode
 }
 
-type ShopCartType = {
-    products: car[],
-    setProducts: (newProduct :[...car[], ...[]]) => void
+interface ProductContextValue {
+    products: car[];
+    setProducts: (data: car[]) => void;
 }
 
-const ProductType = {
-    products: [],
-    setProducts: () => {}
+const initialCarValue: ProductContextValue = {
+    products: []
+    ,
+    setProducts: data => { }
 }
 
-export const ShopCartContext = createContext<ShopCartType>(ProductType)
 
+export const ShopCartContext = createContext<ProductContextValue>(initialCarValue)
 
 
 export const UseShopProvider = ({ children }: ShopCartContextProps) => {
-    const [products, setProducts] = useState([])
-    
+    const [products, setProducts] = useState<car[]>([])
+
+
+
     return (
         <ShopCartContext.Provider value={{ products, setProducts }}>
             {children}
