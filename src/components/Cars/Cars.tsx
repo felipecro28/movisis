@@ -1,7 +1,7 @@
 import './cars.css'
 import Card from '../Card/Card'
 import Header from '../Header/Header'
-import Form from '../Form/Form'
+import Form from '../form/Form'
 import { api } from '../../services/api/fake-api'
 import { useState } from 'react'
 import { orderArray } from '../../services/functions/functions'
