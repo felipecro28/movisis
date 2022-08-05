@@ -1,6 +1,6 @@
 .main-div {
     max-width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #53576b;
     color: #e9f2f9;
 }
@@ -10,7 +10,7 @@
     width: 100%;
     text-align: center;
     margin: 60px 0 30px 0;
-    height: fit-content;
+    min-height: fit-content;
 }
 
 
@@ -56,7 +56,7 @@
 @media (max-width: 1200px) {
 
     .main-div{
-       height: fit-content;
+       min-height: fit-content;
 
     }
     .main-text h1 {
