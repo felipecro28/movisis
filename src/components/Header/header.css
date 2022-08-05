@@ -115,7 +115,7 @@ nav .social-media-div li:hover {
 @media (max-width: 750px) {
 
     header {
-        height: 13vh;
+        min-height: 13vh;
     }
 
     .nav-div {
@@ -125,13 +125,13 @@ nav .social-media-div li:hover {
 
     .nav-div-active {
         width: 100vw;
-        height: 8vh;
+        min-height: 8vh;
         display: flex;
         flex-direction: row;
         position: absolute;
-        top: 13%;
+        top: 18%;
         background-color: #141E26;
-        animation: fadeIn 0.5s;
+        animation: fadeIn 1s;
         border-bottom: 2px white solid;
     }
 
@@ -145,7 +145,7 @@ nav .social-media-div li:hover {
         }
 
         100% {
-            top: '13%'
+            top: '18%'
         }
     }
 

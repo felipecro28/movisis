@@ -78,7 +78,7 @@ flex-direction: column;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 90px;
+    height: 110px;
     width: 400px;
     max-width: 70%;
     box-shadow: 10px 10px 10px black;
@@ -103,7 +103,7 @@ flex-direction: column;
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
     .cart-div{
         height: 100px;
@@ -115,5 +115,10 @@ flex-direction: column;
 
     .cart-div h2{
         font-size: 14px;
+    }
+
+    .total-div{
+        margin: 30px auto;
+        align-self: flex-start;
     }
 }

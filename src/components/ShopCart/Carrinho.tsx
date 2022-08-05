@@ -35,6 +35,7 @@ console.log(products)
             </div>
           </div>)}
           <div className='total-div'>
+            <p>{products.length} veículos em seu carrinho</p>
             <h3>Total: R$ {products.map((car, index) => car.value).reduce((prev, curr) => prev + curr, 0)}</h3>
             <button onClick={(e) => {
               e.preventDefault()
