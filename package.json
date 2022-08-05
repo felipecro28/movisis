@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-router": "^5.1.18",
+    "module-name": "^0.0.1-security",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
