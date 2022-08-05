@@ -42,7 +42,7 @@ export default function Form(props: formProps) {
                     </select>
                 </div>
             </section>
-            <button onClick={(e) => {
+            <button type='submit' onClick={(e) => {
                 e.preventDefault()
                 props.onSubmit(minValue, maxValue, select)
             }}>Filtrar</button>

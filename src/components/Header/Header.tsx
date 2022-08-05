@@ -12,23 +12,23 @@ export default function Header() {
         <header>
             <div className='logo-div'>
                 <div className='logo-text-div'>
-                    <Link style={{textDecoration: 'none', color: '#e9f2f9'}} to='/'><h1>Car Sale</h1></Link>
+                    <Link style={{ textDecoration: 'none', color: '#e9f2f9' }} to='/'><h1>Car Sale</h1></Link>
                     <p>solução imediata em veículos</p>
                 </div>
             </div>
 
-            <div className={active?'hamburguer-menu-active-div':'hamburguer-menu'} onClick={() => setActive(!active)}>
-                <div className={active?'hamburguer-menu-active':''}></div>
-                <div className={active?'hamburguer-menu-active':''}></div>
-                <div className={active?'hamburguer-menu-active':''}></div>
+            <div className={active ? 'hamburguer-menu-active-div' : 'hamburguer-menu'} onClick={() => setActive(!active)}>
+                <div className={active ? 'hamburguer-menu-active' : ''}></div>
+                <div className={active ? 'hamburguer-menu-active' : ''}></div>
+                <div className={active ? 'hamburguer-menu-active' : ''}></div>
             </div>
 
             <div className='nav-div' onTransitionEnd={(e) => setActive(false)}>
                 <nav>
                     <ul className='a-links'>
-                        <li>Sobre nós</li>
-                        <Link style={{textDecoration: 'none', color: '#e9f2f9'}} to='/cars'><li>Nossos veículos</li></Link>
+                        <Link style={{ textDecoration: 'none', color: '#e9f2f9' }} to='/cars'><li>Nossos veículos</li></Link>
                         <li>Contato</li>
+                        <Link style={{ textDecoration: 'none', color: '#e9f2f9' }} to='/carrinho'><li> Carrinho </li></Link>
                     </ul>
 
                     <ul className='social-media-div'>
@@ -42,9 +42,9 @@ export default function Header() {
             {active ? <div className='nav-div-active'>
                 <nav>
                     <ul className='a-links-active'>
-                        <li>Sobre nós</li>
-                        <li>Nossos veículos</li>
+                        <Link style={{ textDecoration: 'none', color: '#e9f2f9' }} to='/cars'><li>Nossos veículos</li></Link>
                         <li>Contato</li>
+                        <Link style={{ textDecoration: 'none', color: '#e9f2f9' }} to='/carrinho'><li> Carrinho </li></Link>
                     </ul>
 
                     <ul className='social-media-div-active'>

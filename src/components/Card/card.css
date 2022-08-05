@@ -1,5 +1,5 @@
 .card-div{
-    height: 400px;
+    height: 450px;
     width: 300px;
     border: solid 2px #141E26;
     margin: 30px auto;
@@ -12,7 +12,7 @@
 }
 
 .card-div h1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 20px;
 }
 
@@ -34,10 +34,30 @@
     right: 15%;
 }
 
+.card-div button{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 150px;
+    height: 30px;
+    max-width: 80%;
+    margin: 20px auto;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border: none;
+    background-color: #ccd3d9a4;
+    box-shadow:  3px 3px 3px black;
+}
+
+.card-div button:active{
+    transform: translateY(2px)
+}
+
 
 @media (max-width: 750px) {
     .card-div{
-        height: 400px;
+        height: 450px;
         width: 250px;
         margin-right: 0;
     }
