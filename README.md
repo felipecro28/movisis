@@ -48,7 +48,6 @@ $ npm install or yarn add
 - Inicie o servidor de desenvolvimento
 ```
 npm run dev
-
 ```
 
 Para contribuir com nosso projeto, siga estas etapas:
