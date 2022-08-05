@@ -15,6 +15,8 @@ export default function ShopCart() {
     productsCopy.splice(index, 1)
     return setProducts([...productsCopy])
 }
+
+console.log(products)
   
 
   return (
