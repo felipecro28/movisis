@@ -3,22 +3,34 @@ import { useState } from 'react'
 
 
 interface formProps {
-    onSubmit: (value1: number, value2: number, select: string) => void
+    onSubmit: (value1: number, value2: number, select: string) => void,
+    changedInput: ( name : string ) => void
 }
 
 export default function Form(props: formProps) {
     const [minValue, setMinValue] = useState<number>(0)
     const [maxValue, setMaxValue] = useState<number>(100000)
     const [select, setSelect] = useState<string>('menor-valor')
+    const [name, setName] = useState<string>('')
+
+
+    
 
     return (
         <form>
             <h1>Filtrar</h1>
 
             <section>
-
+                <div className='name-input'> 
+                    <label htmlFor='name'>Por nome: </label>
+                        <input value={name} onChange={function(e) 
+                            {setName(e.target.value) 
+                            props.changedInput(name)
+                        }} 
+                        placeholder='Nome do Veículo' type="text" id='name' />
+                </div>
                 <div className='preco-input'>
-                    <p>Preço</p>
+                    <p>Preço: </p>
                     <div className='labels-preco-div'>
                         <label htmlFor="de">De:</label>
                         <input value={minValue} onChange={e => setMinValue(+e.target.value)} type="number" name='de' />

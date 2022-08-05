@@ -4,11 +4,27 @@
     height: fit-content;
 }
 
+.form-car-div {
+    display: flex;
+    justify-content: space-between;
+}
+
 .cards-div{
-    width: 100%;
+    width: 85vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+
+@media (max-width: 560px) {
+    .form-car-div{
+        flex-direction: column;
+    }
+
+    .cards-div{
+        width: 100vw;
+    }
 }
